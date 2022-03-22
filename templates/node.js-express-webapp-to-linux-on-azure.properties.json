@@ -1,0 +1,27 @@
+{
+    "iconName": "nodejs",
+    "parameters": [
+        {
+            "name": "azureRmConnection",
+            "type": "endpoint:azureRm",
+            "required": "true",
+            "displayName": "Azure Connection"
+        },
+        {
+            "name": "webAppName",
+            "type": "dataSourcePicklist",
+            "required": "true",
+            "displayName": "Web App name"
+        }
+    ],
+    "dataSourceBindings": [
+        {
+            "dataSourceName": "AzureRMWebAppNamesByAppType",
+            "endpointParameterName": "azureRmConnection",
+            "parameters": {
+                "WebAppKind": "webAppLinux"
+            },
+            "target": "webAppName"
+        }
+    ]
+}
