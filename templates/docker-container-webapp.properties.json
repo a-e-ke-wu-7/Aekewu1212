@@ -1,0 +1,7 @@
+{
+  "iconName": "docker",
+  "parameters": [ 
+    { "name" : "azureServiceConnectionId", "type": "connectedService:azureRM", "required": "true" },
+    { "name" : "repositoryName", "type": "string", "required": "true" }
+  ]
+}
