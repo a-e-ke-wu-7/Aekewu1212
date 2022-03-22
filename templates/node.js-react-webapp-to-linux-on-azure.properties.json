@@ -1,0 +1,26 @@
+{
+    "iconName": "react",
+    "parameters": [
+        {
+            "name": "azureRmConnection",
+            "type": "endpoint:azureRm",
+            "required": "true"
+        },
+        {
+            "name": "webAppName",
+            "type": "dataSourcePicklist",
+            "required": "true",
+            "displayName": "Web App name"
+        }
+    ],
+    "dataSourceBindings": [
+        {
+            "dataSourceName": "AzureRMWebAppNamesByAppType",
+            "endpointParameterName": "azureRmConnection",
+            "parameters": {
+                "WebAppKind": "webAppLinux"
+            },
+            "target": "webAppName"
+        }
+    ]
+}
