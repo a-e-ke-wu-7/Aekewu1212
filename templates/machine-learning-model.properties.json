@@ -1,0 +1,55 @@
+{
+    "iconName": "empty",
+    "parameters": [
+        {
+            "name": "resourceGroupName",
+            "type": "string",
+            "required": "true",
+            "displayName": "Resource group name"
+        },
+        {
+            "name": "workspaceName",
+            "type": "string",
+            "required": "true",
+            "displayName": "Workspace name"
+        },
+        {
+            "name": "runConfig",
+            "type": "string",
+            "required": "true",
+            "displayName": "Run configuration"
+        },
+        {
+            "name": "modelName",
+            "type": "string",
+            "required": "true",
+            "displayName": "Model name"
+        },
+        {
+            "name": "modelAssetPath",
+            "type": "string",
+            "required": "true",
+            "displayName": "Model asset path"
+        },
+        {
+            "name": "serviceName",
+            "type": "string",
+            "required": "true",
+            "displayName": "Service name"
+        },
+        {
+            "name": "inferenceConfigFile",
+            "defaultValue": "inferenceConfig.yml",
+            "type": "string",
+            "required": "true",
+            "displayName": "Inference config file"
+        },
+        {
+            "name": "deploymentConfigFile",
+            "defaultValue": "deploymentConfig.yml",
+            "type": "string",
+            "required": "true",
+            "displayName": "Deployment config file"
+        }
+    ]
+}
