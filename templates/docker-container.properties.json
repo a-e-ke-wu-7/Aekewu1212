@@ -1,0 +1,24 @@
+{
+  "iconName": "docker",
+  "parameters": [
+    {
+      "name": "containerRegistryConnection",
+      "type": "endpoint:containerRegistry",
+      "required": "true",
+      "displayName": "Container Registry"
+    },
+    {
+      "name": "imageRepository",
+      "type": "string",
+      "required": "true",
+      "displayName": "Image Name"
+    },
+    {
+      "name": "dockerfilePath",
+      "type": "string",
+      "required": "false",
+      "displayName": "Dockerfile",
+      "defaultValue": "**/Dockerfile"
+    }
+  ]
+}
