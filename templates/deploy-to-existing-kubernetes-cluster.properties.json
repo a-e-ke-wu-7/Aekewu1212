@@ -1,0 +1,46 @@
+{
+    "iconName": "aks",
+    "parameters": [
+        {
+            "name": "kubernetesConnection",
+            "type": "endpoint:kubernetes",
+            "required": "true"
+        },
+        {
+            "name": "environment",
+            "type": "environment",
+            "required": "true"
+        },
+        {
+            "name": "containerRegistryConnection",
+            "type": "endpoint:containerRegistry",
+            "required": "true"
+        },
+        {
+            "name": "imageRepository",
+            "type": "string",
+            "required": "true",
+            "displayName": "Image Name"
+        },
+        {
+            "name": "servicePort",
+            "type": "string",
+            "required": "true",
+            "displayName": "Service Port"
+        }
+    ],
+    "assets": [
+        {
+            "type": "file",
+            "path": "k8s/deployment.yml",
+            "destinationPath": "manifests/deployment.yml",
+            "description": "Kubernetes manifest (deployment)"
+        },
+        {
+            "type": "file",
+            "path": "k8s/service.yml",
+            "destinationPath": "manifests/service.yml",
+            "description": "Kubernetes manifest (service)"
+        }
+    ]
+}
