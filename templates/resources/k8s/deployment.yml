@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{ imageRepository }} 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ imageRepository }} 
+    spec:
+      containers:
+        - name: {{ imageRepository }} 
+          image: {{ containerRegistryConnection.Authorization.Parameters.loginServer }}/{{ imageRepository }} 
+          ports:
+          - containerPort: {{ servicePort }}
